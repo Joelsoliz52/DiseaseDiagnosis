@@ -7,6 +7,12 @@ public class Disease {
     private String review;
     private String treatment;
 
+    public Disease(int id, String name, String review, String treatment) {
+        this.id = id;
+        this.name = name;
+        this.review = review;
+        this.treatment = treatment;
+    }
     public int getId() {
         return id;
     }

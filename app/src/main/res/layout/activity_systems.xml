@@ -88,7 +88,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Circulatorio"/>
         </LinearLayout>
@@ -111,7 +111,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="General"/>
         </LinearLayout>
@@ -134,7 +134,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Oseo"/>
         </LinearLayout>
@@ -164,7 +164,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Digestivo"/>
         </LinearLayout>
@@ -187,7 +187,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Urinario"/>
         </LinearLayout>
@@ -210,7 +210,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Nervioso"/>
         </LinearLayout>
@@ -240,7 +240,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Respiratorio"/>
         </LinearLayout>
@@ -264,7 +264,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:text="Reproductor"/>
         </LinearLayout>
