@@ -10,46 +10,106 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.wow.diseasediagnosis.R;
 
 public class SystemsActivity extends AppCompatActivity implements View.OnClickListener {
-
+    String extra;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_systems);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.SystemCi);
-        linearLayout.setOnClickListener(this);
-        LinearLayout linearLayout2 = (LinearLayout) findViewById(R.id.SystemGe);
-        linearLayout2.setOnClickListener(this);
-        LinearLayout linearLayout3 = (LinearLayout) findViewById(R.id.SystemOs);
-        linearLayout3.setOnClickListener(this);
-        LinearLayout linearLayout4 = (LinearLayout) findViewById(R.id.SystemRe);
-        linearLayout4.setOnClickListener(this);
+        LinearLayout circulatorio = findViewById(R.id.SystemCi);
+        circulatorio.setOnClickListener(this);
+
+        LinearLayout general = findViewById(R.id.SystemGe);
+        general.setOnClickListener(this);
+
+        LinearLayout oseo = findViewById(R.id.SystemOs);
+        oseo.setOnClickListener(this);
+
+        LinearLayout digestivo = findViewById(R.id.SystemDi);
+        digestivo.setOnClickListener(this);
+
+        LinearLayout respiratorio = findViewById(R.id.SystemRes);
+        respiratorio.setOnClickListener(this);
+
+        LinearLayout urinario = findViewById(R.id.SystemUri);
+        urinario.setOnClickListener(this);
+
+        LinearLayout reproductor = findViewById(R.id.SystemRe);
+        reproductor.setOnClickListener(this);
+
+        LinearLayout nervioso = findViewById(R.id.SystemNer);
+        nervioso.setOnClickListener(this);
+
+        LinearLayout back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        extra = getIntent().getStringExtra("action");
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.SystemCi:
-                Intent intent = new Intent(this, DiseaseSysActivity.class);
-                intent.putExtra("Image","corazon");
-                startActivity(intent);
-                break;
+                if(extra.equals("view")) {
+                    Intent viewCirculatorio = new Intent(this, DiseaseSysActivity.class);
+                    viewCirculatorio.putExtra("Image", "corazon");
+                    startActivity(viewCirculatorio);
+                    break;
+                }
             case R.id.SystemGe:
-                Intent intent2 = new Intent(this, DiseaseSysActivity.class);
-                intent2.putExtra("Image","general");
-                startActivity(intent2);
-                break;
+                if(extra.equals("view")) {
+                    Intent viewGeneral = new Intent(this, DiseaseSysActivity.class);
+                    viewGeneral.putExtra("Image", "general");
+                    startActivity(viewGeneral);
+                    break;
+                }
             case R.id.SystemOs:
-                Intent intent3 = new Intent(this, DiseaseSysActivity.class);
-                intent3.putExtra("Image","huesos");
-                startActivity(intent3);
-                break;
+                if(extra.equals("view")) {
+                    Intent viewOseo = new Intent(this, DiseaseSysActivity.class);
+                    viewOseo.putExtra("Image", "huesos");
+                    startActivity(viewOseo);
+                    break;
+                }
+            case R.id.SystemDi:
+                if (extra.equals("view")) {
+                    Intent viewRenal = new Intent(this, DiseaseSysActivity.class);
+                    viewRenal.putExtra("Image", "estomago");
+                    startActivity(viewRenal);
+                    break;
+                }
+            case R.id.SystemUri:
+                if (extra.equals("view")) {
+                    Intent viewUrinario = new Intent(this, DiseaseSysActivity.class);
+                    viewUrinario.putExtra("Image", "vejiga");
+                    startActivity(viewUrinario);
+                    break;
+                }
             case R.id.SystemRe:
-                Intent intent4 = new Intent(this, DiseaseSysActivity.class);
-                intent4.putExtra("Image","rinion");
-                startActivity(intent4);
-                break;
+                if (extra.equals("view")) {
+                    Intent viewReproductor = new Intent(this, DiseaseSysActivity.class);
+                    viewReproductor.putExtra("Image", "reproductor");
+                    startActivity(viewReproductor);
+                    break;
+                }
+            case R.id.SystemRes:
+                if (extra.equals("view")) {
+                    Intent viewRespiratorio = new Intent(this, DiseaseSysActivity.class);
+                    viewRespiratorio.putExtra("Image", "pulmon");
+                    startActivity(viewRespiratorio);
+                    break;
+                }
+            case R.id.SystemNer:
+                if (extra.equals("view")) {
+                    Intent viewNervioso = new Intent(this, DiseaseSysActivity.class);
+                    viewNervioso.putExtra("Image", "cerebro");
+                    startActivity(viewNervioso);
+                    break;
+                }
         }
     }
-
 }

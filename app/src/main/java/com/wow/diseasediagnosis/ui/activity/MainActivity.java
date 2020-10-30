@@ -2,6 +2,7 @@ package com.wow.diseasediagnosis.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,24 +11,27 @@ import android.widget.LinearLayout;
 import com.wow.diseasediagnosis.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    int touch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.DiagnosisBySymptoms);
-        linearLayout.setOnClickListener(this);
+        LinearLayout diagnosis = findViewById(R.id.DiagnosisBySymptoms);
+        diagnosis.setOnClickListener(this);
 
-        LinearLayout linearLayout2 = (LinearLayout) findViewById(R.id.DiagnosisBySystem);
-        linearLayout2.setOnClickListener(this);
+        LinearLayout diagnosiSys = findViewById(R.id.DiagnosisBySystem);
+        diagnosiSys.setOnClickListener(this);
 
-        LinearLayout linearLayout3 = (LinearLayout) findViewById(R.id.DiseasesAZ);
-        linearLayout3.setOnClickListener(this);
+        LinearLayout diseases = findViewById(R.id.DiseasesAZ);
+        diseases.setOnClickListener(this);
 
-        LinearLayout linearLayout4 = (LinearLayout) findViewById(R.id.DiseasesBySystem);
-        linearLayout4.setOnClickListener(this);
+        LinearLayout diseaseSys = findViewById(R.id.DiseasesBySystem);
+        diseaseSys.setOnClickListener(this);
+
+        LinearLayout secret = findViewById(R.id.secret);
+        secret.setOnClickListener(this);
     }
 
     @Override
@@ -36,18 +40,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.DiagnosisBySymptoms:
                 break;
             case R.id.DiagnosisBySystem:
-                Intent intent2 = new Intent(this, SystemsActivity.class);
-                startActivity(intent2);
+                Intent systemDiagnosis = new Intent(this, SystemsActivity.class);
+                systemDiagnosis.putExtra("action","diagnosis");
+                startActivity(systemDiagnosis);
                 break;
             case R.id.DiseasesAZ:
-                Intent intent3 = new Intent(this, DiseasesActivity.class);
-                startActivity(intent3);
+                Intent viewDisease = new Intent(this, DiseasesActivity.class);
+                startActivity(viewDisease);
                 break;
             case R.id.DiseasesBySystem:
-                Intent intent4 = new Intent(this, SystemsActivity.class);
-                intent4.putExtra("","2");
-                startActivity(intent4);
+                Intent viewDiseaseSys = new Intent(this, SystemsActivity.class);
+                viewDiseaseSys.putExtra("action","view");
+                startActivity(viewDiseaseSys);
                 break;
+            case R.id.secret:
+                touch++;
+                if(touch==5){
+                    Intent intent5 = new Intent(this, SecretActivity.class);
+                    startActivity(intent5);
+                    touch=0;
+                }
         }
     }
 }
