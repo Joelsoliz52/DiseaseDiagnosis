@@ -21,9 +21,9 @@
 
             <!--suppress AndroidDomInspection -->
             <ImageView
+                android:id="@+id/iconoDS"
                 android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/+s" />
+                android:layout_height="60dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,9 +32,9 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textDS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Disease Diagnosis"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                     android:textColor="#000000"
                     android:textSize="25sp" />
