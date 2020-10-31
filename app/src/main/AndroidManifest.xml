@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.SecretActivity"></activity>
+        <activity android:name=".ui.activity.SecretRegisterActivity"></activity>
+        <activity android:name=".ui.activity.SecretActivity" />
         <activity android:name=".ui.activity.DiseaseSysActivity" />
         <activity android:name=".ui.activity.SystemsActivity" />
         <activity android:name=".ui.activity.DiseasesActivity" />

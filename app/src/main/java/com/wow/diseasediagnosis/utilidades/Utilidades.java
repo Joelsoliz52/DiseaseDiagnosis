@@ -9,6 +9,6 @@ public class Utilidades {
     public static final String FIELD_REVIEW="review";
     public static final String FIELD_TREATMENT="treatment";
 
-    public static final String CREATE_TABLE_DISEASE="CREATE TABLE"+TABLE_DISEASE+"(id INT, name TEXT, review TEXT, treatment TEXT)";
+    public static final String CREATE_TABLE_DISEASE="CREATE TABLE "+TABLE_DISEASE+" ("+FIELD_ID+" INTEGER, "+FIELD_NAME+" TEXT, "+FIELD_REVIEW+" TEXT, "+FIELD_TREATMENT+" TEXT)";
 
 }
